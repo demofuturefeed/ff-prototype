@@ -2,10 +2,26 @@
 
 A lightweight full-stack prototype for managing structured requirements, evidence tracking, and task completion workflows.
 
-- ⚡ Frontend: React (Vite)
+Built with a **React (Vite) frontend** and a **Go backend API**, using JSON-based persistence for rapid prototyping. Requires Node.js.
+
+---
+
+# 🛠️ Quickstart
+
+```
+npm install concurrently --save-dev
+npm run dev:all
+```
+
+---
+
+# ⚙️ Tech Stack
+ 
+- ⚡ Frontend: React + Vite
 - 🐹 Backend: Go (net/http)
-- 📊 Data: JSON-based persistence (prototype stage)
+- 📊 Data Layer: JSON file storage (prototype stage)
 - 🔗 API: REST-style endpoints
+- 🧩 Dev Tooling: npm + concurrently
 
 ---
 
@@ -13,19 +29,22 @@ A lightweight full-stack prototype for managing structured requirements, evidenc
 
 - Category-based requirement tracking
 - Evidence entry per requirement
-- One-time save-and-lock workflow
-- Progress tracking (percentage + completion count)
-- Submission flow with completion alert (trophy case)
+- Save-and-lock workflow (prevents post-submission edits)
+- Progress tracking (completion count + percentage)
+- Submission flow with completion “trophy case”
 - Locked vs editable UI states
-- Go backend API with JSON storage
+- Lightweight Go backend serving JSON API
+- Simple API abstraction layer on frontend
 
 ---
 
 # 📁 Project Structure
+
+```
 ├── api.go # Go backend server
-├── requirements.json # backend data source
-├── vite.config.js # Vite config
-├── eslint.config.js # ESLint rules
+├── requirements.json
+├── vite.config.js
+├── eslint.config.js
 ├── package.json
 ├── package-lock.json
 
@@ -34,13 +53,14 @@ A lightweight full-stack prototype for managing structured requirements, evidenc
 │ └── favicon.svg
 
 ├── src/
-│ ├── App.jsx # main React app
-│ ├── main.jsx # React entry point
-│ ├── styles.css # global styles
+│ ├── App.jsx
+│ ├── main.jsx
+│ ├── styles.css
 │
 │ ├── components/
 │ │ └── RequirementCard.jsx
 │
 │ └── api/
-│ ├── requirements.js # API helper layer
-│ └── requirements.json # legacy/local mock data (optional)
+│ ├── requirements.js
+│ └── requirements.json
+```
