@@ -39,7 +39,10 @@ export default function App() {
             if (req.id !== reqId) return req;
             if (req.saved) return req;
 
-            return { ...req, evidenceText: value };
+            return {
+              ...req,
+              evidenceText: value
+            };
           })
         };
       })
@@ -94,7 +97,6 @@ export default function App() {
   // ----------------------------
   const handleSubmit = () => {
     if (!allComplete) return;
-
     alert("🏆 All tasks completed successfully.");
     window.location.reload();
   };
@@ -104,7 +106,7 @@ export default function App() {
       {/* HEADER */}
       <div className="nav">
         <div className="nav-top">
-          <h1>Prototype</h1>
+          <h2>Prototype</h2>
 
           <div className="nav-metrics">
             <div className="metric">
@@ -117,13 +119,15 @@ export default function App() {
         </div>
 
         <div className="progress-bar">
-          <div className="progress-fill" style={{ width: `${progress}%` }} />
+          <div
+            className="progress-fill"
+            style={{ width: `${progress}%` }}
+          />
         </div>
       </div>
 
       {/* BODY */}
-      <div className="container">
-
+      <div className="container" style={{ display: "flex", gap: 24 }}>
         <div className="sidebar">
           <b>Domains</b>
           {categories.map(c => (
@@ -132,7 +136,6 @@ export default function App() {
         </div>
 
         <div style={{ flex: 1 }}>
-
           {categories.map(cat => (
             <div className="card" key={cat.id}>
               <h3>{cat.name}</h3>
@@ -155,6 +158,7 @@ export default function App() {
                   <textarea
                     value={req.evidenceText || ""}
                     disabled={req.saved}
+                    className={!req.saved ? "incomplete" : ""}
                     onChange={(e) =>
                       updateRequirement(cat.id, req.id, e.target.value)
                     }
@@ -182,7 +186,6 @@ export default function App() {
               SUBMIT
             </button>
           </div>
-
         </div>
       </div>
     </>
