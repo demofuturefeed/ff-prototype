@@ -1,0 +1,174 @@
+{
+  "categories": [
+    {
+      "id": "AC",
+      "name": "Access Control",
+      "requirements": [
+        {
+          "id": "AC.1.001",
+          "category": "",
+          "title": "Limit system access to authorized users",
+          "status": "complete",
+          "evidenceCount": 2,
+          "evidence": [
+            {
+              "id": "ev-001",
+              "name": "Active Directory Access Policy.pdf",
+              "uploadedAt": "2026-06-01"
+            },
+            {
+              "id": "ev-002",
+              "name": "User Provisioning Procedure.docx",
+              "uploadedAt": "2026-06-02"
+            }
+          ],
+          "etag": "33da588bd0b8aacfa1d084f9e4716bd971f2bf9f"
+        },
+        {
+          "id": "AC.1.002",
+          "category": "",
+          "title": "Enforce multi-factor authentication for all users",
+          "status": "in-progress",
+          "evidenceCount": 1,
+          "evidence": [
+            {
+              "id": "ev-003",
+              "name": "MFA Rollout Plan.pdf",
+              "uploadedAt": "2026-06-05"
+            }
+          ],
+          "etag": "3c47bbfdc829889ca911dd2360ed205f81d26b53"
+        },
+        {
+          "id": "AC.1.003",
+          "category": "",
+          "title": "Restrict privileged account usage",
+          "status": "not-started",
+          "evidenceCount": 0,
+          "evidence": [],
+          "etag": "27cece7fb1d2da778e18a6ce76d9fe3d1c134aac"
+        }
+      ]
+    },
+    {
+      "id": "IR",
+      "name": "Incident Response",
+      "requirements": [
+        {
+          "id": "IR.2.001",
+          "category": "",
+          "title": "Maintain incident response plan",
+          "status": "complete",
+          "evidenceCount": 1,
+          "evidence": [
+            {
+              "id": "ev-010",
+              "name": "IRP_2026.pdf",
+              "uploadedAt": "2026-05-20"
+            }
+          ],
+          "etag": "3355d4833c84fa52bec6cf9c175175bef782f7d1"
+        },
+        {
+          "id": "IR.2.002",
+          "category": "",
+          "title": "Conduct annual incident response testing",
+          "status": "in-progress",
+          "evidenceCount": 1,
+          "evidence": [
+            {
+              "id": "ev-011",
+              "name": "Tabletop Exercise Results.docx",
+              "uploadedAt": "2026-06-10"
+            }
+          ],
+          "etag": "a2b5b96d7d5fcefb8f878c544a1e3c83b34212e0"
+        }
+      ]
+    },
+    {
+      "id": "RA",
+      "name": "Risk Assessment",
+      "requirements": [
+        {
+          "id": "RA.3.001",
+          "category": "",
+          "title": "Perform annual risk assessments",
+          "status": "complete",
+          "evidenceCount": 1,
+          "evidence": [
+            {
+              "id": "ev-020",
+              "name": "Risk_Assessment_2026.xlsx",
+              "uploadedAt": "2026-04-15"
+            }
+          ],
+          "etag": "2ff7d1a6f22a5b48981e564a2a9e66abc3392f03"
+        },
+        {
+          "id": "RA.3.002",
+          "category": "",
+          "title": "Document risk mitigation strategies",
+          "status": "in-progress",
+          "evidenceCount": 0,
+          "evidence": [],
+          "etag": "0af2edcea2e3c4d41651b3c56b900f4cb65bda2a"
+        },
+        {
+          "id": "RA.3.003",
+          "category": "",
+          "title": "Review third-party vendor risks",
+          "status": "not-started",
+          "evidenceCount": 0,
+          "evidence": [],
+          "etag": "e94b2e8f2572c76db03cfa3a0299affa87c3de8a"
+        }
+      ]
+    },
+    {
+      "id": "AU",
+      "name": "Audit \u0026 Logging",
+      "requirements": [
+        {
+          "id": "AU.4.001",
+          "category": "",
+          "title": "Enable system audit logging",
+          "status": "complete",
+          "evidenceCount": 1,
+          "evidence": [
+            {
+              "id": "ev-030",
+              "name": "Syslog_Config_Screenshot.png",
+              "uploadedAt": "2026-03-10"
+            }
+          ],
+          "etag": "4fb5ebb058ef9e0b9ab9cb4dc3029d02fb20d3ee"
+        },
+        {
+          "id": "AU.4.002",
+          "category": "",
+          "title": "Retain logs for at least 90 days",
+          "status": "in-progress",
+          "evidenceCount": 1,
+          "evidence": [
+            {
+              "id": "ev-031",
+              "name": "Log_Retention_Policy.pdf",
+              "uploadedAt": "2026-05-01"
+            }
+          ],
+          "etag": "5c0139bc64422f0dcc13754a67b39b3c67bf4549"
+        },
+        {
+          "id": "AU.4.003",
+          "category": "",
+          "title": "Monitor unauthorized access attempts",
+          "status": "not-started",
+          "evidenceCount": 0,
+          "evidence": [],
+          "etag": "3804ceca45ce0e48987dff59b733b402e485d632"
+        }
+      ]
+    }
+  ]
+}

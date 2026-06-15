@@ -1,0 +1,94 @@
+body {
+  font-family: Inter, sans-serif;
+  margin: 0;
+  background: #0b0b0f;
+  color: white;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(11,11,15,0.9);
+  backdrop-filter: blur(10px);
+  padding: 14px 24px;
+  border-bottom: 1px solid #222;
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-metrics {
+  display: flex;
+  gap: 20px;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4ade80;
+  transition: width 0.3s ease;
+}
+
+.container {
+  padding: 24px;
+}
+
+.card {
+  background: #15151d;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 8px;
+  min-height: 60px;
+  background: #0f0f15;
+  border: 1px solid #333;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+textarea:disabled {
+  opacity: 0.35;
+  color: #777;
+  background: #0a0a0c;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #4ade80;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #1f1f25;
+  color: #666;
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.checkmark {
+  color: #4ade80;
+  font-weight: 700;
+}
