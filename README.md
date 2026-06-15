@@ -1,4 +1,9 @@
+
+
 # 📦 FutureFeed Prototype (ff-prototype)
+
+<img width="914" height="782" alt="image" src="https://github.com/user-attachments/assets/170dc89b-c053-446e-bdf3-dbae084307fe" />
+
 
 A lightweight full-stack prototype for managing structured requirements, evidence tracking, and task completion workflows.
 
@@ -12,6 +17,13 @@ Built with a **React (Vite) frontend** and a **Go backend API**, using JSON-base
 npm install concurrently --save-dev
 npm run dev:all
 ```
+## Instructions:
+1. Type input
+2. Click <kbd>Save</kbd>
+3. Scroll
+4. Repeat
+5. Click <kbd>Submit</kbd>.
+
 
 ---
 
