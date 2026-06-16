@@ -37,6 +37,8 @@ type Response struct {
 	Categories []Category `json:"categories"`
 }
 
+const dataFile = "./src/api/requirements.json"
+
 var (
 	data Response
 	mu   sync.Mutex
@@ -53,8 +55,8 @@ func hash(s string) string {
 // -----------------------------
 // LOAD DATA
 // -----------------------------
-func loadData(path string) error {
-	file, err := os.Open(path)
+func loadData() error {
+	file, err := os.Open(dataFile)
 	if err != nil {
 		return err
 	}
@@ -72,12 +74,12 @@ func loadData(path string) error {
 // -----------------------------
 // SAVE DATA (FIXED MISSING PIECE)
 // -----------------------------
-func saveData(path string) error {
+func saveData() error {
 	b, err := json.MarshalIndent(data, "", "  ")
 	if err != nil {
 		return err
 	}
-	return os.WriteFile(path, b, 0644)
+	return os.WriteFile(dataFile, b, 0644)
 }
 
 // -----------------------------
@@ -192,7 +194,7 @@ func categoryHandler(w http.ResponseWriter, r *http.Request) {
 			}
 
 			// persist to disk (CRITICAL FIX)
-			if err := saveData("requirements.json"); err != nil {
+			if err := saveData(); err != nil {
 				http.Error(w, "failed to save data", http.StatusInternalServerError)
 				return
 			}
@@ -217,7 +219,7 @@ func health(w http.ResponseWriter, r *http.Request) {
 // -----------------------------
 func main() {
 
-	if err := loadData("./src/api/requirements.json"); err != nil {
+	if err := loadData(); err != nil {
 		log.Fatal(err)
 	}
 
