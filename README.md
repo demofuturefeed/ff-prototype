@@ -7,8 +7,6 @@
 
 A lightweight full-stack prototype for managing structured requirements, evidence tracking, and task completion workflows.
 
-Built with a **React (Vite) frontend** and a **Go backend API**, using JSON-based persistence for rapid prototyping. Requires Node.js.
-
 ---
 
 # 🛠️ Quickstart
@@ -30,10 +28,17 @@ npm run dev:all
 # ⚙️ Tech Stack
  
 - ⚡ Frontend: React + Vite
-- 🐹 Backend: Go (net/http)
+- 🐹 Backend: Go (net/http) + Node.js
 - 📊 Data Layer: JSON file storage (prototype stage)
 - 🔗 API: REST-style endpoints
-- 🧩 Dev Tooling: npm + concurrently
+
+```
+GET 	/health	Server health check
+GET 	/api/requirements	Get all categories and requirements
+GET 	/api/categories/:id	Get a single category
+POST	/api/categories/:id	Update a single category
+```
+
 
 ---
 
